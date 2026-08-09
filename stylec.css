@@ -1,0 +1,237 @@
+        /* Define custom theme and colors (PROFESSIONAL DARK MODE) */
+        :root {
+            --primary-blue: #0A3D62; /* Deep Navy/Institutional Blue */
+            --accent-blue: #00BFFF; /* Electric Blue Accent */
+            --accent-purple: #C8A2C8; /* User-inspired Soft Purple Accent */
+            --background: #0D1117; /* Very Dark Background */
+            --text-light: #EBEBEB; /* Near White Text */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* Enhanced animated background with depth */
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(0, 191, 255, 0.03) 1px, transparent 1px), 
+                linear-gradient(to bottom, rgba(0, 191, 255, 0.03) 1px, transparent 1px),
+                radial-gradient(ellipse at 20% 30%, rgba(0, 191, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(200, 162, 200, 0.06) 0%, transparent 50%);
+            background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
+            animation: grid-float 20s ease-in-out infinite;
+        }
+        
+        @keyframes grid-float {
+            0%, 100% { opacity: 0.15; }
+            50% { opacity: 0.25; }
+        }
+
+        /* Enhanced button styles with glow effects */
+        .academic-button {
+            background: linear-gradient(135deg, var(--accent-blue), #0080CC);
+            color: var(--background);
+            font-weight: 700;
+            border: 2px solid var(--accent-blue);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .academic-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .academic-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .academic-button:hover {
+            background: transparent;
+            color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), 0 0 40px rgba(0, 191, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Secondary button style */
+        .secondary-button {
+            background-color: transparent;
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .secondary-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        .secondary-button:hover::after {
+            left: 100%;
+        }
+        .secondary-button:hover {
+            background-color: var(--accent-blue);
+            color: var(--background);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), 0 0 40px rgba(0, 191, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Cursor Animation (simplified to a gentle pulse for modern digital look) */
+        .digital-cursor {
+            animation: digital-pulse 1.2s infinite alternate;
+        }
+        @keyframes digital-pulse {
+            from { opacity: 0.7; }
+            to { opacity: 1; }
+        }
+
+        /* Enhanced Card Styles with advanced animations */
+        .project-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-border-blue:hover { 
+            border-color: var(--accent-blue); 
+            box-shadow: 0 0 25px rgba(0, 191, 255, 0.6), 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        .card-border-purple:hover { 
+            border-color: var(--accent-purple); 
+            box-shadow: 0 0 25px rgba(200, 162, 200, 0.6), 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        .card-border-gold:hover { 
+            border-color: #FFD700; 
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Enhanced data graphic with pulse animation */
+        .data-graphic {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-blue), #0080CC);
+            box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+            animation: pulse-glow 2s ease-in-out infinite;
+            position: relative;
+        }
+        .data-graphic::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-blue);
+            opacity: 0;
+            animation: ripple 2s ease-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 45px rgba(0, 191, 255, 0.8);
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes ripple {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Sidebar icon animations */
+        .sidebar-icon {
+            transition: all 0.3s ease;
+        }
+        .sidebar-icon:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        /* Title glow effect */
+        .title-glow {
+            text-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 40px rgba(0, 191, 255, 0.3);
+            animation: title-glow-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes title-glow-pulse {
+            0%, 100% { text-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 40px rgba(0, 191, 255, 0.3); }
+            50% { text-shadow: 0 0 30px rgba(0, 191, 255, 0.7), 0 0 60px rgba(0, 191, 255, 0.4); }
+        }
+
+        /* Card icon animations */
+        .card-icon {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover .card-icon {
+            transform: scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+
+        /* Scroll reveal animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in-up:nth-child(3) { animation-delay: 0.3s; }

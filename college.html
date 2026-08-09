@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technocrat - Official Site</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font (professional sans-serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for the sidebar and hero element -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+   <link rel="stylesheet" href="stylec.css">
+</head>
+<body>
+    <!-- Subtle Grid Background -->
+    <div class="grid-bg fixed inset-0 z-0"></div>
+
+    <div class="min-h-screen flex">
+        
+        <!-- Vertical Sidebar (Institutional Navigation) -->
+        <aside class="fixed top-0 left-0 h-full w-16 bg-[var(--primary-blue)]/90 backdrop-blur-sm z-20 shadow-2xl hidden md:flex flex-col items-center pt-8 border-r border-sky-600/50">
+            <div class="space-y-10 mt-10">
+                <div class="group cursor-pointer p-2 rounded-lg hover:bg-sky-700 transition duration-300">
+                    <i data-lucide="home" class="sidebar-icon w-6 h-6 text-white group-hover:text-[var(--accent-blue)]"></i>
+                </div>
+                <div class="group cursor-pointer p-2 rounded-lg hover:bg-sky-700 transition duration-300">
+                    <i data-lucide="info" class="sidebar-icon w-6 h-6 text-white group-hover:text-[var(--accent-blue)]"></i>
+                </div>
+                <div class="group cursor-pointer p-2 rounded-lg hover:bg-sky-700 transition duration-300">
+                    <i data-lucide="phone" class="sidebar-icon w-6 h-6 text-white group-hover:text-[var(--accent-blue)]"></i>
+                </div>
+                <div class="group cursor-pointer p-2 rounded-lg hover:bg-sky-700 transition duration-300">
+                    <i data-lucide="calendar" class="sidebar-icon w-6 h-6 text-white group-hover:text-[var(--accent-blue)]"></i>
+                </div>
+                <div class="group cursor-pointer p-2 rounded-lg hover:bg-sky-700 transition duration-300">
+                    <i data-lucide="trophy" class="sidebar-icon w-6 h-6 text-white group-hover:text-[var(--accent-blue)]"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow md:ml-16 p-6 md:p-12 z-10 w-full">
+            
+            <!-- Hero Section -->
+            <section class="min-h-[50vh] flex flex-col items-center text-center justify-center pt-10 pb-16">
+                
+                <!-- Title -->
+                <h1 class="text-4xl md:text-6xl font-black mb-3 uppercase tracking-wider">
+                    <span id="technocrat-title" class="text-white title-glow"></span>
+                    <span id="cursor" class="digital-cursor inline-block w-4 h-8 md:h-12 align-middle rounded-sm" style="background-color: var(--accent-blue);"></span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-3xl mb-10 max-w-4xl text-sky-400 font-light" style="animation: fadeInUp 1s ease 0.5s forwards; opacity: 0;">
+                    Engineering Excellence. Shaping the Future of Technology and Code.
+                </p>
+
+                <!-- Academic Graphic Placeholder -->
+                <div class="mb-16 flex justify-center space-x-12 items-center" style="animation: fadeInUp 1s ease 0.7s forwards; opacity: 0;">
+                    <div class="data-graphic">
+                        <i data-lucide="columns-3" class="w-10 h-10 text-white/80"></i>
+                    </div>
+                    <div class="data-graphic" style="box-shadow: 0 0 30px rgba(200, 162, 200, 0.6); animation-delay: 0.2s;">
+                        <i data-lucide="cpu" class="w-10 h-10 text-white/80"></i>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8" style="animation: fadeInUp 1s ease 0.9s forwards; opacity: 0;">
+                    <a href="#" class="academic-button px-10 py-4 rounded-xl text-lg">
+                        APPLY NOW
+                    </a>
+                    <a href="#" class="secondary-button px-10 py-4 rounded-xl text-lg">
+                        EXPLORE ACADEMICS
+                    </a>
+                </div>
+            </section>
+
+            <!-- --- Project/Department Cards Section --- -->
+            <section class="py-16">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 font-extrabold text-white title-glow">DEPARTMENTS & RESEARCH TRACKS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    
+                    <!-- Mobile Computing (Blue) -->
+                    <div class="project-card card-border-blue border-2 border-transparent p-8 rounded-xl cursor-pointer fade-in-up">
+                        <i data-lucide="smartphone" class="card-icon w-8 h-8 mb-4 text-[var(--accent-blue)]"></i>
+                        <h3 class="text-xl mb-2 font-bold text-[var(--accent-blue)]">Mobile Computing & Devices</h3>
+                        <p class="text-sm text-gray-400">
+                            Focus on advanced Android and iOS development, embedded systems, and next-generation IoT protocols.
+                        </p>
+                    </div>
+
+                    <!-- Web/Infrastructure (Purple Accent) -->
+                    <div class="project-card card-border-purple border-2 border-transparent p-8 rounded-xl cursor-pointer fade-in-up">
+                        <i data-lucide="globe" class="card-icon w-8 h-8 mb-4 text-[var(--accent-purple)]"></i>
+                        <h3 class="text-xl mb-2 font-bold text-[var(--accent-purple)]">Web & Distributed Systems</h3>
+                        <p class="text-sm text-gray-400">
+                            Comprehensive study of full-stack development, cloud architecture, and secure distributed ledger technologies.
+                        </p>
+                    </div>
+
+                    <!-- AI/ML (Gold Accent - for contrast) -->
+                    <div class="project-card card-border-gold border-2 border-transparent p-8 rounded-xl cursor-pointer fade-in-up">
+                        <i data-lucide="brain" class="card-icon w-8 h-8 mb-4 text-[#FFD700]"></i>
+                        <h3 class="text-xl mb-2 font-bold text-[#FFD700]">Artificial Intelligence & ML</h3>
+                        <p class="text-sm text-gray-400">
+                            Advanced courses in deep learning, neural networks, and robotics, training the next wave of data scientists.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer / Copyright -->
+        <footer class="absolute bottom-0 left-0 md:pl-16 w-full text-center p-3 text-xs text-gray-500 border-t border-gray-800">
+            © 2025 Technocrat Institute of Innovation. All rights reserved.
+            github:https://github.com/manthan-shah-dev
+        </footer>
+    </div>
+
+    <!-- JavaScript for the Title Cursor Animation -->
+    <script src="scriptc.js"></script>
+</body>
+</html>
